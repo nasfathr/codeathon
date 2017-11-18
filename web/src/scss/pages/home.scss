@@ -4,7 +4,7 @@ main {
             margin-top: 80px;
             .bc-input-wrapper{
             	@media screen and (min-width: $screen-md-max - 31) {
-            		width: 700px;
+            		
             	}
             	margin: 100px auto 0 auto;
 				
@@ -28,7 +28,7 @@ main {
 
             .bc-info-wrapper{
             	@media screen and (min-width: $screen-md-max - 31) {
-            		width: 650px;
+            		
             	}
             	margin: 100px auto 0 auto;
             	.bc-btn{
@@ -58,10 +58,11 @@ main {
             }
 
             .bc-info{
-            	width: 700px;
+            	
             	margin: 90px auto 0 auto;
+                  width: 620px;
             	.bc-scan{
-            		width: 615px;
+            		
             	}
             }
         }
