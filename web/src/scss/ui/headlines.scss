@@ -1,0 +1,25 @@
+
+h1, h2, h3, h4 {
+  margin-top: 0;
+}
+
+.bc-h1{
+	 @include headline($bc-h1, $raleway-exlight, $bc-white, $bc-spacer-20 + 2);
+
+	 @media screen and (max-width: $screen-md-max) {
+	 	font-size:$bc-h1 - 21;
+	 	 margin-top: $bc-spacer-100;
+	 }	
+
+	 &.light{
+			color: $bc-color-40;
+	 }
+}
+
+.bc-h6{
+	 @include headline($bc-h6, $open-bold, $bc-primary-color, $bc-spacer-20 + 2);
+}
+
+
+
+

@@ -1,0 +1,69 @@
+main {
+    .bc {
+        &-container-wrapper {
+            margin-top: 80px;
+            .bc-input-wrapper{
+            	@media screen and (min-width: $screen-md-max - 31) {
+            		width: 700px;
+            	}
+            	margin: 100px auto 0 auto;
+				
+            	input{
+            		&.bc-exception{
+            			@media screen and (min-width: $screen-md-max - 31) {
+							width: 500px;
+							height: 45px;
+							background: $bc-gray-10;
+							margin-top: -3px;
+						}
+            		}
+            	}
+
+            	a.bc-btn-primary{
+            		&:hover{
+            			color: $bc-white;
+            		}
+            	}
+            }
+
+            .bc-info-wrapper{
+            	@media screen and (min-width: $screen-md-max - 31) {
+            		width: 650px;
+            	}
+            	margin: 100px auto 0 auto;
+            	.bc-btn{
+            		font-family: $open-bold;
+            		margin-left:40px;
+            	}
+
+            	.bc-hidden.bc-show{
+            		display:block;
+            	}
+            	
+            }
+
+            .bc-status-wrapper{
+            	.bc{
+            		&-scan{
+            			border: 1px solid $bc-gray-10;
+            			padding: 15px;
+            		}
+            		&-top{
+            			
+            		}
+            		&-bottom{
+            			
+            		}
+            	}
+            }
+
+            .bc-info{
+            	width: 700px;
+            	margin: 90px auto 0 auto;
+            	.bc-scan{
+            		width: 615px;
+            	}
+            }
+        }
+    }
+}

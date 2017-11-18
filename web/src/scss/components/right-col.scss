@@ -1,0 +1,14 @@
+.bc{
+	&-main-container{ 
+		width:auto;
+		height:1500px;
+		margin-top: $bc-spacer-50;
+		@media screen and (min-width: $screen-md-max - 31) {
+			margin-left: $sidebar-length;
+		}
+	}
+
+	&-content {
+    	padding-top: 70px;
+	}
+}
