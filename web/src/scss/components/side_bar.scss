@@ -34,7 +34,7 @@
     				transition: all .3s ease-out;
     				font-family: $open-bold;
     				font-size: 20px;
-					&:hover{
+					&:hover, &.bc-active{
 						text-decoration: underline;
 					}
 				}
