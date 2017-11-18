@@ -1,0 +1,154 @@
+html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-size: $font-size-base;
+  font-family: $open-regular;
+  -webkit-font-smoothing: subpixel-antialiased;
+  height: 100%;
+  width: 100%;
+  line-height: 1.15;
+  color: $bc-violet-dark; // height:6018px; //delete
+}
+
+a {
+  color: $bc-white;
+  text-decoration: none;
+  &:hover,
+  &:active {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+ul li {
+  list-style-type: none;
+}
+
+p {
+  line-height: $line-height-base;
+  margin-top: 0;
+  font-family: $open-light;
+}
+
+button{
+  background: transparent;
+    border-width: 0;
+}
+
+.font {
+
+  &-small {
+    font-size: $font-size-small + 1;
+  }
+}
+
+
+.bc {
+
+  &-center {
+    text-align: center;
+  }
+
+  &-left {
+    text-align: left;
+  }
+
+  &-right {
+    text-align: right;
+  }
+
+  &-heighlight {
+    font-family: $open-bold;
+  }
+
+  &-relative {
+    position: relative;
+  }
+
+  &-inline {
+    li {
+      display: inline;
+    }
+  }
+
+  &-hidden{
+    display: none;
+  }
+
+  &-show{
+    display:block !important;
+  }
+
+  &-orange{
+    color: $bc-orange;
+  }
+
+  &-green{
+    color: $bc-color-40;
+  }
+
+  &-blue{
+    color: $bc-blue-40;
+  }
+
+  &-red{
+    color: red;
+  }
+
+}
+
+//common spacer
+@for $i from 1 through 100{
+    .bc-spacer-t-#{$i}{padding-top: 1px * $i;}
+    .bc-spacer-r-#{$i}{padding-right: 1px * $i;}
+    .bc-spacer-b-#{$i}{padding-bottom: 1px * $i;}
+    .bc-spacer-l-#{$i}{padding-left: 1px * $i;}
+}
+
+
+@media screen and (max-width: $screen-sm-max) {
+    .bc-left-xs {
+        text-align: left;
+    }
+
+    //mobile spacer
+    @for $i from 1 through 100{
+        .bc-spacer-m-t-#{$i}{padding-top: 1px * $i;}
+        .bc-spacer-m-r-#{$i}{padding-right: 1px * $i;}
+        .bc-spacer-m-b-#{$i}{padding-bottom: 1px * $i;}
+        .bc-spacer-m-l-#{$i}{padding-left: 1px * $i;}
+    } 
+}
+
+.clearfix{
+  clear:both;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+{{> head title='Overwatch - Blockchain Address Validation'}}
+  <body>
+  	 {{> header}}
+    <main>
+    	<div class="bc-container-wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="bc-input-wrapper">
+                <form class="form-inline">
+                  <div class="form-group mx-sm-3">
+                    <input type="text" class="form-control bc-exception" id="inputaddress" placeholder="Search by Address or Ens">
+                  </div>
+                  <a id="check" class="bc-btn bc-btn-primary">Check</a>
+                </form>
+              </div>  
+            </div>
+          </div>
+          <div class="bc-status-wrapper bc-hidden">
+            <div class="row">
+              <div class="col-md-12">
+                  {{> scan banned= true}}
+              </div>
+            </div>
+          </div>
+          <div class="row">
+             <div class="col-md-12">
+                <div class="bc-info-wrapper">
+              <button type="submit" class="bc-btn bc-btn-default">Subscribe to Our Service</button>
+              <button type="submit" class="bc-btn bc-btn-default">Contact Us</button>
+            </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </main>
+      {{> commonjs}}
+      {{> footer}}
+  </body>
+</html>
