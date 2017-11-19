@@ -6,7 +6,7 @@ const whitelist = require('./lib/whitelist');
 const app = express();
 
 app.get('/api/ethereum/check/:hash', (req, res) => {
-	var address = request.params.hash;
+	var address = req.params.hash;
 	
 	whitelist.check(address).then(status => {
 		if (status) {
@@ -33,7 +33,7 @@ app.get('/api/ethereum/check/:hash', (req, res) => {
 });
 
 app.get('/api/ethereum/trust/:hash', (req, res) => {
-	var address = request.params.hash;
+	var address = req.params.hash;
 	
 	suspectlist.check(address).then(status => {
 		if (status) {
