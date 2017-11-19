@@ -2,10 +2,10 @@
         <div id="sidebar" class="bc-sidebar-nav bc-spacer-t-50">
           <nav>
             <ul>
-              <li><a href="">New Request</a></li>
-              <li><a href="">Blacklist</a></li>
-              <li><a href="">Suspected Address</a></li>
-              <li><a href="">Whitelist</a></li>
+              <li><a class="{{#if newrequirement }}bc-active{{/if}}" href="new-requirement.html">New Request</a></li>
+              <li><a class="{{#if blacklist }}bc-active{{/if}}" href="blacklist.html">Blacklist</a></li>
+              <li><a class="{{#if suspended }}bc-active{{/if}}" href="suspended.html">Suspended Address</a></li>
+              <li><a class="{{#if whitelist }}bc-active{{/if}}" href="whitelist.html">Whitelist</a></li>
             </ul>
           </nav>
         </div>

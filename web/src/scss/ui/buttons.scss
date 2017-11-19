@@ -25,6 +25,12 @@
 
 	&-primary{
 		@include bc-button(10px 30px, white, 18px, $bc-primary-color, 0px);
+
+		&:hover, &:active{
+			background: $bc-primary-color;
+			color: $bc-white;
+		}
+
 	}
 
 	&-secondory{
