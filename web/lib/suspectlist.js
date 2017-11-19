@@ -1,6 +1,6 @@
 var List = require('./loadlist');
 
-var list = new List('../suspectlist.json');
+var list = new List('suspectlist.json');
 
 function check (address) {
 	return list.get().then(l => {
