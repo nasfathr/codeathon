@@ -1,0 +1,36 @@
+<div class="bc-info bc-width-w">
+{{!--     <div class="bc-bottom bc-scan">
+                    Status: <span class="bc-heighlight {{#if good}} bc-green {{/if}} {{#if certified}} bc-blue {{/if}} {{#if banned}} bc-red {{/if}} {{#if suspected}} bc-orange {{/if}}">{{#if good}} good {{/if}} {{#if certified}} Certified {{/if}} {{#if banned}} banned {{/if}}
+			{{#if suspected}} Suspected {{/if}}</span>
+    </div> --}}
+    <div class="bc-hidden {{#if certified}} bc-show {{/if}}">
+	    <div class="bc-bottom bc-scan">
+	    	Certification Link: cert-gti.org/common_up/cert-new/document_.pdf 
+	    </div>
+	     <div class="bc-bottom bc-scan">
+	    	Valid until <span class="bc-highlight"> 23 December 2017 </span>
+	    </div>
+    </div>
+
+    <div class="bc-hidden {{#if suspected}} bc-show bc-suspended{{/if}}">
+	     <div class="bc-bottom bc-scan">
+	     	<img src="../images/suspicious.svg" alt="">
+	     	<div class="bc-highlight">
+	     		Suspicious address
+	     	</div>
+	     	<div class="bc-center">
+	     		<span>under BNM</span>
+	     	</div>	
+	    </div>
+    </div>
+
+    <div class="bc-hidden {{#if banned}} bc-show bc-banned{{/if}}">
+	    <div class="bc-bottom bc-scan">
+	     	<i class="fa fa-shield" aria-hidden="true"></i>
+	     	<div>
+	     		Banned!
+	     	</div>
+	    	
+	    </div>
+    </div>
+</div>

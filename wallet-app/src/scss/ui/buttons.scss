@@ -1,0 +1,56 @@
+.bc-btn{
+	display: inline-block;
+	line-height: 1.428571;
+	touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    min-width: 100px;
+    -webkit-transition: all .3s ease-out;
+    	transition: all .3s ease-out;
+
+	&-default{
+	@include bc-button(10px 30px, $bc-primary-color, 18px, transparent, 0px);
+	border: 1px solid $bc-primary-color;
+	
+	&:hover, &:active{
+		background: $bc-primary-color;
+		color: $bc-white;
+	}
+
+	}
+
+	&-primary{
+		@include bc-button(10px 30px, white, 18px, $bc-gray-20, 0px);
+
+		&:hover, &:active{
+			background: $bc-primary-color;
+			color: $bc-white;
+		}
+
+	}
+
+	&-primary-2{
+		@include bc-button(10px 30px, white, 18px, $bc-primary-color, 0px);
+
+	}
+
+	&-primary-3{
+		@include bc-button(10px 30px, $bc-primary-color, 18px, #FFD84F, 0px);
+
+
+	}
+
+	&-secondory{
+	@include bc-button($bc-spacer-5 $bc-spacer-40, $bc-white, $font-size-small, inherit, 50px);
+	@include two-gradient-l-r($bc-blue-10, $bc-blue-20);
+	}
+
+	&-shadow{
+		@include bc-shadow(1px, 3px, 4px, 0px);
+	}
+
+}
