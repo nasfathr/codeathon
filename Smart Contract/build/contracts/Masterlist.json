@@ -1,0 +1,158 @@
+{
+  "contract_name": "Masterlist",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_input",
+          "type": "address"
+        }
+      ],
+      "name": "checkSuspected",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_input",
+          "type": "address"
+        }
+      ],
+      "name": "addToBannedList",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_input",
+          "type": "address"
+        }
+      ],
+      "name": "removeFromBannedList",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_input",
+          "type": "address"
+        }
+      ],
+      "name": "removeFromSuspectList",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "suspectList",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "bannedList",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_input",
+          "type": "address"
+        }
+      ],
+      "name": "addToSuspectList",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_input",
+          "type": "address"
+        }
+      ],
+      "name": "checkBanned",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "type": "constructor"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b60028054600160a060020a03191633600160a060020a03161790555b5b6103b78061003c6000396000f300606060405236156100965763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663103871ee811461009b5780632125fba6146100ce5780633ddc4ba6146100ef5780634d6de1dc14610110578063733ebf14146101315780638da5cb5b14610162578063bd424ee714610191578063bfa5be7d146101c2578063d3bfa56a146101e3575b600080fd5b34156100a657600080fd5b6100ba600160a060020a0360043516610216565b604051901515815260200160405180910390f35b34156100d957600080fd5b6100ed600160a060020a0360043516610248565b005b34156100fa57600080fd5b6100ed600160a060020a0360043516610281565b005b341561011b57600080fd5b6100ed600160a060020a03600435166102b7565b005b341561013c57600080fd5b610150600160a060020a03600435166102ed565b60405190815260200160405180910390f35b341561016d57600080fd5b6101756102ff565b604051600160a060020a03909116815260200160405180910390f35b341561019c57600080fd5b610150600160a060020a036004351661030e565b60405190815260200160405180910390f35b34156101cd57600080fd5b6100ed600160a060020a0360043516610320565b005b34156101ee57600080fd5b6100ba600160a060020a0360043516610359565b604051901515815260200160405180910390f35b600160a060020a0381166000908152600160205260408120546002141561023f57506001610243565b5060005b919050565b60025433600160a060020a039081169116141561027c57600160a060020a0381166000908152602081905260409020600190555b5b5b50565b60025433600160a060020a039081169116141561027c57600160a060020a0381166000908152602081905260408120555b5b5b50565b60025433600160a060020a039081169116141561027c57600160a060020a0381166000908152600160205260408120555b5b5b50565b60016020526000908152604090205481565b600254600160a060020a031681565b60006020819052908152604090205481565b60025433600160a060020a039081169116141561027c57600160a060020a0381166000908152600160205260409020600290555b5b5b50565b600160a060020a0381166000908152602081905260408120546001141561023f57506001610243565b5060005b9190505600a165627a7a7230582086b22fb1e8017f1d93ef8f2b1fea3747f6c1755d1938c8a889033832c621a9fb0029",
+  "networks": {
+    "4": {
+      "events": {},
+      "links": {},
+      "address": "0x52cb397e126a696a9f88e3da4feb0e5121963f4f",
+      "updated_at": 1511055009632
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1511055009632
+}
