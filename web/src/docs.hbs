@@ -2,7 +2,10 @@
   <body>
      {{> header}}
     <main>
-      <div class="bc-container-wrapper bc-center">
+      <style>
+	    code: { white-space: pre; display: block; }
+	  </style>
+      <div class="bc-container-wrapper">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
@@ -20,13 +23,13 @@
 			 	</dl>
 			 	Response:
 			 	<code>
-			 		{
-			 			good:      boolean,           // true if address is good
-			 			bad:       boolean,           // true if address is in blacklist or suspect list
-			 			blocked:   boolean,           // true if address is in blacklist
-			 			suspect:   boolean,           // true if address is in suspect list
-			 			whitelist: true or undefined  // true if address is in whitelist
-			 		}
+{
+	good:      boolean,           // true if address is good
+	bad:       boolean,           // true if address is in blacklist or suspect list
+	blocked:   boolean,           // true if address is in blacklist
+	suspect:   boolean,           // true if address is in suspect list
+	whitelist: true or undefined  // true if address is in whitelist
+}
 			 	</code>
 			 </p>
             </div>
