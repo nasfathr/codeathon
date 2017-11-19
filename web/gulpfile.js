@@ -14,6 +14,7 @@ const ghPages     = require('gulp-gh-pages');
 const sassGlob    = require('gulp-sass-bulk-import');
 const watch       = require('gulp-watch');
 const babel       = require('gulp-babel');
+const waiter      = new require('waiter')();
 
 var paths = {
   src: { root: 'src' },
@@ -65,6 +66,7 @@ gulp.task('styles', () => {
     .pipe(prefixer('last 2 versions'))
     .on('error', util.log)
     .pipe(gulp.dest(paths.dist.css))
+	.on('end',waiter())
     .pipe(browserSync.reload({stream: true}));
 });
 
@@ -85,6 +87,7 @@ gulp.task('templates', () => {
     }))
     .on('error', util.log)
     .pipe(gulp.dest(paths.dist.root))
+	.on('end',waiter())
     .pipe(browserSync.reload({stream: true}));
 });
 
@@ -101,6 +104,7 @@ gulp.task('scripts', () => {
     .pipe(uglify())
     .on('error', util.log)
     .pipe(gulp.dest(paths.dist.javascript))
+	.on('end',waiter())
     .pipe(browserSync.reload({stream: true}));
 
   /*
@@ -114,22 +118,26 @@ gulp.task('scripts', () => {
     }))
     .on('error', util.log)
     .pipe(gulp.dest(paths.dist.libs))
+	.on('end',waiter())
     .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('images', () => {
   gulp.src([paths.src.images])
-    .pipe(gulp.dest(paths.dist.images));
+    .pipe(gulp.dest(paths.dist.images))
+	.on('end',waiter());
 });
 
 gulp.task('fonts', () => {
   gulp.src([paths.src.fonts])
-    .pipe(gulp.dest(paths.dist.fonts));
+    .pipe(gulp.dest(paths.dist.fonts))
+	.on('end',waiter());
 });
 
 gulp.task('files', () => {
   gulp.src([paths.src.files])
-    .pipe(gulp.dest(paths.dist.root));
+    .pipe(gulp.dest(paths.dist.root))
+	.on('end',waiter());
 });
 
 watch(paths.src.images, () => {
@@ -157,4 +165,12 @@ gulp.task('deploy', () => {
 
 
 gulp.task('default', ['watch', 'serve', 'images', 'fonts', 'files', 'styles', 'scripts', 'templates']);
-gulp.task('generate', ['watch', 'images', 'fonts', 'files', 'styles', 'scripts', 'templates']);
+gulp.task('generate', ['watch', 'images', 'fonts', 'files', 'styles', 'scripts', 'templates'], () => {
+	setTimeout(()=>{
+		console.log('Writing files to disk, please wait...');
+	},1);
+	waiter.waitForAll(()=>{
+		console.log('Done!');
+		process.exit();
+	})
+});
