@@ -4,7 +4,7 @@ h1, h2, h3, h4 {
 }
 
 .bc-h1{
-	 @include headline($bc-h1, $raleway-exlight, $bc-white, $bc-spacer-20 + 2);
+	 @include headline($bc-h1, $raleway-exlight, $bc-primary-color, $bc-spacer-20 + 2);
 
 	 @media screen and (max-width: $screen-md-max) {
 	 	font-size:$bc-h1 - 21;
