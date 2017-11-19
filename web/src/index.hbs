@@ -6,7 +6,41 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-  
+              <div class="bc-intro-content bc-left">
+                <h1 class="bc-h1">Introduction and Problem Statement</h1> 
+              
+                Blockchains have become very popular for being anonymous. Bad actors leverage its anonymity to transfer value in cryptocurrencies for  funding numerous illegal activities. Additionally, channels for transfer of value, such as Initial Coin Offerings (ICOs), done via a Blockchain provides minimal transparency with regards to the legitimacy of participants and fund raisers.<br> <br>
+                With the surge in cryptocurrency transactions along with platforms which enable interactions with these currencies, it becomes vital to have a service these platforms can use to identify suspected bad actors given their Blockchain address.<br> <br>
+
+                <h1 class="bc-h1">Solution</h1>
+
+                Our idea of 'Overwatch', aims to provide cryptocurrency users and platforms an AI-enabled service to identify Blockchain addresses which have been directly involved in or linked to suspicious activity. <br> <br>
+
+               <h1 class="bc-h1">Description</h1>
+
+                Blockchains allow transfer of value using addresses with no direct link to a human identity. However, all transactions are publicly available and a trail of value transfers can easily be built.
+                <br> <br>
+                Given an input list of known Blockchain addresses which have been directly involved in illicit and fraudulent acts such as terrorism financing or hacks of wallets and crypto exchanges, its trail of transactions can be analyzed, and spending and transacting patterns studied. This allows us to train an AI to maintain and output master list of  suspected addresses, differentiated by the degree of influence to illicit activities. This process can be carried out by using neural networks which learns from the Blacklisted addresses based on the following parameters - senders and recipients of transactions along with the quantity and frequency of amounts transferred. With a learnt AI, we scan entire Blockchains to expand our list of possible suspected addresses. Suspected addresses increase over time as our AI learns and relearns fraudulent transaction patterns.
+<br> <br>
+
+                This master list of suspected addresses can then provided as a service in the form of REST APIs or smart contracts. Wallets, trading platforms, e-commerce merchants and other portals whose business runs on cryptocurrency transactions can leverage our services to integrate with their own verification systems. Additionally, a smart contract can be configured to make this list available on-chain, which allows ICO creators and ICO investors to perform a primary level check of legitimacy of Blockchain addresses.
+<br> <br>
+                To conclude,
+                The properties of Blockchains makes it difficult to link an identity to an address. We attempt to provide a service which does a pattern study of public transaction data and existing blacklisted addresses,  to measure suspicious activity, and deliver the legitimacy of an address as the output.
+<br>
+                For this project we have delivered the following
+                - Overwatch Address Browser Portal for Address Check
+                - Overwatch Admin Portal
+                - Overwatch API integrated mobile wallet
+                - Overwatch Smart Contract for 3rd party ICO integration
+                - AI training and processing scripts
+<br> <br>
+
+        <div class="bc-spacer-b-40 bc-center">
+          <a href="scanaddress.html" class="bc-btn bc-btn-primary"> Overwatch Address </a>
+        <a href="new-requirement.html" id="check" class="bc-btn bc-btn-primary">Admin Portal</a>
+        </div>
+              </div>
             </div>
           </div>
         </div>
