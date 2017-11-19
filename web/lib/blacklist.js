@@ -1,9 +1,10 @@
-var list = require('../blacklist.json');
+var List = require('./loadlist');
+
+var list = new List('../blacklist.json');
 
 function check (address) {
-	return new Promise((ok,fail) => {
-		// We don't have data yet so hardcode to pass for now
-		ok(false);
+	return list.get().then(l => {
+		return l.filter(x => x==address).length != 0;
 	});
 }
 
