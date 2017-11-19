@@ -3,26 +3,29 @@
      {{> header}}
     <main>
       <style>
-	    code { white-space: pre; display: block; }
+	    code {white-space: pre; display: block; background-color: #ccefff }
+		dt {float:left; width:5em}
+		dt::after {content: ":"}
+		dl {margin-top: 5px;margin-bottom:10px}
 	  </style>
       <div class="bc-container-wrapper">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
              <h2>HTTP REST API<h2>
-			 <br><br>
+			 <br>
 			 <p>
 			 	<h3>Check</h3>
 			 	<code>GET /api/{network}/check/{address}</code>
 			 	<p>
 			 		This checks the status of a blockchain address.
 			 	</p>
-			 	Parameters:
+			 	<ul>Parameters</ul>
 			 	<dl>
 			 		<dt>network</dt><dd>The blockchain network. Currently only "ethereum" is supported.</dd>
 			 		<dt>address</dt><dd>The blockchain address to check.</dd>
 			 	</dl>
-			 	Response:
+			 	<ul>Response</ul>
 			 	<code>
 {
 	good:      boolean,           // true if address is good
@@ -33,14 +36,15 @@
 }
 			 	</code>
 			 </p>
-			 			 <p>
+			 <hr>
+ 			 <p>
 			 	<h3>Trust</h3>
 			 	<code>GET /api/{network}/trust/{address}</code>
 			 	<p>
 			 		If your users decide to send or receive funds from a suspect address you may call this endpoint
 			 		to record the user's decision. Overwatch may then use this data to train and improve the AI.
 			 	</p>
-			 	Parameters:
+			 	<ul>Parameters</ul>
 			 	<dl>
 			 		<dt>network</dt><dd>The blockchain network. Currently only "ethereum" is supported.</dd>
 			 		<dt>address</dt><dd>The blockchain address</dd>

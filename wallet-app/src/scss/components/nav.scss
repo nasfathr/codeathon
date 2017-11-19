@@ -1,0 +1,296 @@
+/*   
+    Spot is the span on the inside of the href that
+    fills the parent and makes the hover and link work
+    for the entire div
+*/
+
+nav.bc-nav-wrapper {
+    margin-top: $bc-spacer-20;
+}
+
+.spot {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+
+
+/*
+    This is the outer svg wrapper that the SVG itself will 
+    fill. Multiple svg-wrapper classes can be put side by side.
+*/
+
+.bc-svg-wrapper {
+    margin: 0;
+    position: relative;
+    width: 126px;
+    /*make sure to use same height/width as in the html*/
+    height: $bc-spacer-30 + 4;
+    display: inline-block;
+    border-radius: 3px;
+
+    &:after {
+        display: inline-block;
+        content: "";
+        border-top: .2rem solid #06D6A0;
+        width: $bc-spacer-10 - 5;
+        transform: translateY(-1rem);
+        top: $bc-spacer-20 + 6;
+        position: absolute;
+        right: -5px;
+        opacity: 0.2;
+    }
+
+    &:before {
+        display: inline-block;
+        content: "";
+        border-top: .2rem solid #06D6A0;
+        width: $bc-spacer-10 - 5;
+        transform: translateY(-1rem);
+        top: $bc-spacer-20 + 6;
+        position: absolute;
+        left: -5px;
+        opacity: 0.2;
+    }
+
+    &:hover:after,
+    &:hover:before,
+    &.bc-active
+    {
+        -webkit-animation: 1s ease 0s normal forwards 1 fadein;
+        animation: 1s ease 0s normal forwards 1 fadein;
+        @keyframes fadein {
+            0% {
+                opacity: 0.2;
+            }
+            66% {
+                opacity: 0.2;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fadein {
+            0% {
+                opacity: 0.2;
+            }
+            66% {
+                opacity: 0.2;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+    /* 
+    Changing the shape on hover. I change the color of the stroke,
+make it thinner, then set it to again wrap around the entire parent element.
+*/
+    &:hover #shape,
+    &:active #shape,
+    &.bc-active #shape
+     {
+        stroke-dasharray: 50 0;
+        stroke-width: 2px;
+        stroke-dashoffset: 0;
+        stroke: #06D6A0;
+    }
+}
+
+
+/*
+  This is where we define the fill, color, thickness,
+  and stroke pattern of the SVG when there is no hover.
+  The dasharray and offset together define the line position
+  under the words. Here's also where the transition speed is set.
+*/
+
+#shape {
+    stroke-width: 2px;
+    fill: transparent;
+    stroke: #009FFD;
+    stroke-dasharray: 0 400;
+    stroke-dashoffset: -224;
+    transition: 1s all ease;
+}
+
+
+
+
+/* 
+    Pushing the text up into the SVG. Without this the
+    text would be below the div's.
+*/
+
+.bc-menu-text {
+    margin-top: -31px;
+    text-align: center;
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-weight: 100;
+        font-size: $font-size-base;
+    }
+}
+
+
+@media screen and (max-width: $screen-md-max) {
+  
+    header {
+
+        .bc-nav-wrapper {
+            display: none;
+        }
+
+        .bc-svg-wrapper {
+
+            border-radius: 0;
+            width:100%;
+            height: auto;
+
+            &:after,
+            &:before {
+                display: none;
+            }
+
+            svg {
+                display: none;
+            }
+        }
+
+        .bc-nav-wrapper {
+            background: transparent;
+            margin-top: $bc-spacer-50 + 6;
+            position: absolute;
+            width: 100%;
+            right: 0px;
+            overflow: hidden;
+        }
+
+        .bc-menu-text {
+            text-align: left;
+            margin: 0;
+            a {
+                padding: $bc-spacer-10 + 5;
+                width: 100%;
+                display: block;
+                border-bottom: 1px solid $bc-secondary-color;
+            }
+        }
+
+        .bc-consult-wrapper {
+            margin-top: 0px;
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+            left: 0;
+            border-radius: 0px;
+            padding: $bc-spacer-10 + 5 $bc-spacer-10 + 5;
+            z-index:2;
+        }
+
+
+        /* E S T I L O S  E S P E C I A L E S */
+        /* menú cerrado */
+        .bc-mob-menu {
+            transition: all .25s;
+            position: fixed;
+            top: $bc-spacer-10;
+            right: $bc-spacer-10 + 5;
+            z-index: 1;
+            cursor: pointer;
+
+            ul {
+                transition: all .05s;
+                position: fixed;
+                right: -9000px;
+
+                li {
+                    list-style: none;
+                }
+            }
+        }
+
+        /* ícono hamburguesa */
+        .bc-bar {
+            position: fixed;
+            right: $bc-spacer-10 + 5;
+            top: $bc-spacer-20 + 7;
+            height: $bc-spacer-10 - 4;
+            width: $bc-spacer-30;
+            border-radius: $bc-spacer-10 + 5;
+            background-color: $bc-white;
+
+            &:before {
+                transition: all .25s;
+                content: "";
+                position: absolute;
+                right: 0;
+                top: -8px;
+                height: $bc-spacer-10 - 4;
+                width: $bc-spacer-30;
+                border-radius: $bc-spacer-10 + 5;
+                background-color: $bc-white;
+            }
+
+            &:after {
+                transition: all .25s;
+                content: "";
+                position: absolute;
+                left: 0;
+                top: $bc-spacer-10 - 2;
+                height: $bc-spacer-10 - 4;
+                width: $bc-spacer-30;
+                border-radius: $bc-spacer-10 + 5;
+                background-color: $bc-white;
+            }
+        }
+        /* menú abierto */
+        .menu-expanded {
+            transition: all .25s;
+            text-align: center;
+            height: 100%;
+            width: 100%;
+            border-radius: 0px;
+            top: 0;
+            left: 0;
+            background-color: $bc-primary-color;
+
+            .bc-nav-wrapper{
+              display:block;
+            }
+
+        }
+        /* ícono cerrar */
+        .menu-expanded .bc-bar {
+            background-color: transparent;
+            transition: all .25s;
+        }
+        .menu-expanded .bc-bar:before {
+            transition: all .25s;
+            content: "";
+            transform: rotate(45deg);
+            top: -0px;
+        }
+        .menu-expanded .bc-bar:after {
+            transition: all .25s;
+            content: "";
+            transform: rotate(-45deg);
+            top: 0px;
+        }
+    }
+}
+
+@media screen and (max-width: $screen-xs-max) {
+    header {
+        .bc-nav-wrapper {
+            width: 100%;
+        }
+    }
+}

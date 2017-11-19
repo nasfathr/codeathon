@@ -1,0 +1,43 @@
+.bc{
+	&-main-container{ 
+		width:auto;
+		height:1500px;
+		margin-top: $bc-spacer-50;
+		@media screen and (min-width: $screen-md-max - 31) {
+			margin-left: $sidebar-length;
+		}
+	}
+
+	&-content {
+    	padding-top: 70px;
+	}
+}
+
+.search {
+    padding: 12px 50px 12px 12px;
+}
+
+.bc-icon-search{
+	a{
+		color: $bc-primary-color;
+	}
+	i{
+	position: absolute;
+    right: 15px;
+    font-size:23px;
+    top: 0px
+	}
+}	
+
+.bc-table{
+	.bc-icon{
+		font-size: 23px;
+		margin-left:20px;
+	}
+}
+
+.bc-appeal-wrapper{
+	.form-group{
+		text-align:left;
+	}
+} 
