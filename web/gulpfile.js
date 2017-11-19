@@ -157,3 +157,4 @@ gulp.task('deploy', () => {
 
 
 gulp.task('default', ['watch', 'serve', 'images', 'fonts', 'files', 'styles', 'scripts', 'templates']);
+gulp.task('generate', ['watch', 'images', 'fonts', 'files', 'styles', 'scripts', 'templates']);
