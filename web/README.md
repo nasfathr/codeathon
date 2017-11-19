@@ -15,5 +15,9 @@ To compile website for production type:
     gulp generate
 	
 	
+### API server
 
+To run the API server just do:
+
+    node main.js
 	
