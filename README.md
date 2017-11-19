@@ -10,7 +10,7 @@ AI docs: [`AI/README.md`](./AI/README.md)
 
 Web docs: [`smart-contract/README.md`](./smart-contract/README.md)
 
-## Website and API
+### Website and API
 
 API docs: [`web/README.md`](./web/README.md)
 
