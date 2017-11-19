@@ -2,7 +2,7 @@
   "name": "overwatch",
   "version": "1.0.0",
   "description": "Use AI to detect and block bad guys",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "serve"
   },
